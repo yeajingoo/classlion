@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your word's count is {{ word_count }}</h1>
+
+<a href="{% url 'home' %}">Go home</a>
+
+<h2>Your text : {{ full }}</h2>
+
+<h2>Word count :</h2>
+{% for word, count in dictionary %}
+    <p>{{ word }} : {{ count }}</p>
+{% endfor %}
+{% endblock %}

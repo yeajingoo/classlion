@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>word count</h1>
+
+    <a href="{% url 'about' %}">About</a>
+    <br>
+    <form action="{% url 'result' %}">
+        <textarea name="fulltext" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="count">
+    </form>
+{% endblock %}
